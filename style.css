@@ -1,0 +1,97 @@
+.container::before {
+    background: url(1.gif);
+    filter: blur(5px);
+    transform: scale(1.1);
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    height: 100vh;
+    widows: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 2fr 1fr 1fr 10fr;
+    grid-template-areas: ". . ." ". name ." ". . ." ". decode . " ". . .";
+    z-index: 1;
+}
+
+.name {
+
+
+    grid-area: name;
+    color: white;
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr 1fr 1fr .5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". a0 a1 a2 a3 .";
+
+
+    user-select: none;
+
+}
+
+
+.a0, .a1, .a2, .a3 {
+    text-align: center;
+    font-size: 500%;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+
+.a0 {
+    grid-area: a0;
+}
+
+.a1 {
+    grid-area: a1;
+}
+
+.a2 {
+    grid-area: a2;
+}
+
+.a3 {
+    grid-area: a3;
+}
+
+.decode {
+    grid-area: decode;
+
+    text-align: center;
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    -ms-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+}
+.decode:hover {
+    background-color: rgba(255, 255, 255, 0.137);
+    transition: 250ms;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    color:white;
+    letter-spacing: 1em;
+}
+@media screen and (max-width: 600px){
+    button{
+        letter-spacing: 0.5em;
+    }
+}
+@media screen and (max-width: 300px){
+    button{
+        letter-spacing: 0.2em;
+    }
+}
